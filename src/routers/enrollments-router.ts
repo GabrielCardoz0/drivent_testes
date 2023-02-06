@@ -5,10 +5,10 @@ import { createEnrollmentSchema } from "@/schemas";
 
 const enrollmentsRouter = Router();
 
-enrollmentsRouter
+enrollmentsRouter 
   .get("/cep", getAddressFromCEP)
   .all("/*", authenticateToken)
   .get("/", getEnrollmentByUser)
   .post("/", validateBody(createEnrollmentSchema), postCreateOrUpdateEnrollment);
 
-export { enrollmentsRouter };
+export { enrollmentsRouter }; 
